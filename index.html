@@ -1,0 +1,133 @@
+<html>
+<body>
+<style>
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+</style>
+
+<style>
+.onoffswitch {
+    position: relative; width: 97px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 50px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 34px; padding: 0; line-height: 34px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "Online";
+    padding-left: 10px;
+    background-color: #22BF4A; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "Offline";
+    padding-right: 10px;
+    background-color: #ED4747; color: #FFFFFF;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 24px; margin: 5px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 59px;
+    border: 2px solid #999999; border-radius: 50px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+</style>
+
+<style>
+  .p2 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+
+<style>
+.button {
+  background-color: rgb(0, 71, 171);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+
+<style>
+body {
+  background-image: url('https://cdn.discordapp.com/attachments/906609618313170988/913456625807937626/i01_fb69836EkRHLyviZMtSjodB4gByQJwyYxPmBE1x.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
+
+<div class="onoffswitch">
+    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0" checked>
+    <label class="onoffswitch-label" for="myonoffswitch">
+        <span class="onoffswitch-inner"></span>
+        <span class="onoffswitch-switch"></span>
+    </label>
+</div>
+
+<style>
+  input.larger {
+    width: 60px;
+    height: 60px;
+}
+</style>
+
+<p style="position:relative; font-size:64px; left:170px; top:200px"id="text" class="p2">Pause Idling</p>
+
+<button style="position:relative; left:520px; top:70px" class="button" id="runit" onclick="firstFunction(); testF();">Idle</button>
+
+<script>
+ function firstFunction() {
+  var x = document.getElementById("text");
+  if (x.innerHTML === "Start Idling") {
+    x.innerHTML = "Pause Idling";
+  } else {
+    x.innerHTML = "Start Idling";
+  }
+}
+</script>
+
+</body>
+</html>
